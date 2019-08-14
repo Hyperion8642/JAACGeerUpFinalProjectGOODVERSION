@@ -16,6 +16,9 @@ public class FinanceCalculator {
             int itemCost = itemInputCost.nextInt();
             sum = sum + itemCost;
         }
+        System.out.print("hi");
+        System.out.print("hi");
+        System.out.println("Hello");
 
         for(int x=0;x< items.length; x++){
             System.out.println("");
