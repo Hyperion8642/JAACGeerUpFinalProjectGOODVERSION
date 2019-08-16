@@ -11,6 +11,7 @@ public class Main extends JFrame {
     private static DecimalFormat df = new DecimalFormat("#.##");
 
     public static void main(String[] args) {
+        System.out.println("Hello");
 
 //        Setting up the frame
         JFrame frame = new JFrame("Manage Your Spending");
