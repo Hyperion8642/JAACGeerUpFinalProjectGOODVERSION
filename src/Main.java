@@ -14,7 +14,7 @@ public class Main extends JFrame {
         System.out.println("Hello");
 
 //        Setting up the frame
-        JFrame frame = new JFrame("Manage Your Spending");
+        JFrame frame = new JFrame("Calc UR Finances");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setSize(500, 600);
@@ -107,9 +107,11 @@ public class Main extends JFrame {
                 double balance = Double.parseDouble(firstOfTxt) - total;
                 textArea.append("\n" + "Final Balance: $" + df.format(balance) + "\n");
 
-                if (balance < 100.00) {
-                    textArea.append("You're broke! Manage your finances better!");
-                } else {
+                if (balance < 0.00) {
+                    textArea.append("LMAO You're in DEBT! You are now on the express line to becoming homeless");
+                } else if (balance < 100.00){
+                    textArea.append("You're broke! Why did you waste so much money!");
+                } else{
                     textArea.append("Great job keeping your finances in check!");
                 }
 
@@ -119,9 +121,11 @@ public class Main extends JFrame {
             }
         });
 
+//        Resetting the frame
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+
                 textArea.setText("What was your previous balance $" + "\n");
 
                 for (int i = 0; i < items.length; i++) {
@@ -129,13 +133,6 @@ public class Main extends JFrame {
                 }
 
                 inputArea.setText("");
-            }
-        });
-
-        jm1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
             }
         });
 
