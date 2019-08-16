@@ -97,7 +97,7 @@ public class Main extends JFrame {
                 for (int b = 0; b < items.length; b++) {
                     double percentage =- Math.round(((itemsPrice[b]/total)*10000));
                     textArea.append(items[b] + "\n");
-                    textArea.append("                  "+percentage*0.01+"%");
+                    textArea.append("                  "+ df.format(percentage*0.01) +"%");
                     textArea.append("\n");
                 }
 
